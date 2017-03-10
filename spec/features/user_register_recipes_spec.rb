@@ -39,14 +39,14 @@ feature 'User Register Recipes' do
     expect(page).to have_content recipe.kitchen
     expect(page).to have_content recipe.kind_of_food
     expect(page).to have_content recipe.yield
-    expect(page).to have_content recipe.preparation_time
     expect(page).to have_content recipe.difficulty_level
-    expect(page).to have_content   recipe.ingredients
+    expect(page).to have_content recipe.ingredients
+    expect(page).to have_content recipe.preparation_time
     expect(page).to have_content recipe.method_of_preparation
 
   end
 
-  scenario 'and should fill all fields'
+  scenario 'and should fill all fields' do
     #execução
     visit new_recipe_path
 
@@ -54,3 +54,4 @@ feature 'User Register Recipes' do
     #expectativa
     expect(page).to have_css 'Não foi possivel cadastrar a receita'
 end
+  end

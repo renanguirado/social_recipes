@@ -1,0 +1,15 @@
+<% form_for @recipe do |f| %>
+<div>
+ <%= f.label :name, 'Nome da Receita' %>
+ <%= f.text_field :name %>
+</div>
+<div>
+ <%= f.label :kitchen, 'Cozinha'%>
+ <%= f.text_field :kitchen %>
+</div>
+<div>
+ <%= f.label :kind_of_food, 'Tipo de comida' %>
+ <%= f.text_field :kind_of_food  %>
+</div>
+<%= f.submit 'Cadastrar Receita' %>
+<% end %>
